@@ -1,0 +1,17 @@
+﻿/*主页标题设置*/
+.title {
+    padding-top:20%;
+    background:)no-repeat bottom;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    -ms-background-size:cover;
+    min-height:750px;
+}
+.title h1 {
+    font-size:2em;
+    padding:1em;
+    border-bottom:1px solid #FF0000;
+    text-align:center;
+}
