@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Notes.Models
+namespace MyMvc.Models
 {
     public class User
     {
@@ -10,6 +10,7 @@ namespace Notes.Models
         [Required(ErrorMessage="请输入密码！")]
         public string passwd { get; set; }
         [Required(ErrorMessage="请输入邮箱！")]
+        [DataType(System.ComponentModel.DataAnnotations.DataType.EmailAddress)]
         public string email { get; set; }
         public int confirm { get; set; }
         public string way { get; set; }

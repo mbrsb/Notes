@@ -3,20 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Notes.Models;
+using MyMvc.Models;
 
 namespace Notes.Controllers
 {
-    public class UserController : Controller
+    public class HomeController : Controller
     {
-        // GET: User
+        // GET: Index
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Login(User user)
+        [HttpGet]
+        public ViewResult Login()
         {
-
+            return View();
+        }
+        [HttpPost]
+        public ViewResult Login(User user)
+        {
             return View();
         }
     }

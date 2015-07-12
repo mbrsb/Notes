@@ -1,17 +1,43 @@
 ﻿/*主页标题设置*/
 .title {
-    padding-top:20%;
-    background:)no-repeat bottom;
+    background:fixed; left:0; top:0;
+    background-repeat:no-repeat;
     background-size:cover;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     -ms-background-size:cover;
-    min-height:750px;
 }
 .title h1 {
     font-size:2em;
     padding:1em;
+    padding-top:10%;
     border-bottom:1px solid #FF0000;
     text-align:center;
+}
+/*主页输入框*/
+.login {
+    text-align:center;
+    padding:10%;
+}
+.login input{
+    min-width:150px;
+    color:grey;
+}
+.login p {
+    font-size:1em;
+    color:#4800ff;
+    margin:50px;
+}
+#login,#reg{
+    min-width:50px;
+    color:#ffffff;
+    font-size:1em;
+    background:#4800ff;
+    border:1px solid hidden;
+    font-weight:700;
+    margin:50px;
+}
+#psd, #name {
+    color:#FF0000;
 }
