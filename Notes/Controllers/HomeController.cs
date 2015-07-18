@@ -9,11 +9,6 @@ namespace Notes.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Index
-        public ActionResult Index()
-        {
-            return View();
-        }
         [HttpGet]
         public ViewResult Login()
         {
@@ -21,6 +16,18 @@ namespace Notes.Controllers
         }
         [HttpPost]
         public ViewResult Login(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                return View();
+            }  
+            
+        }
+        public ActionResult Reg()
         {
             return View();
         }

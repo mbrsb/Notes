@@ -1,0 +1,55 @@
+﻿@model MyMvc.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" media="all"/ >
+    <meta name="viewport" content="width=device-width" />
+    <title>主页</title>
+    <script type="text/javascript">
+    function $(id)
+    {
+        return document.getElementById(id);
+    }
+    function aa(obj,id)
+    {
+        if (obj.value == "用户名/邮箱")
+        {
+            $(id).style.color = 'Black';
+            obj.value = "";
+        }
+    }
+    function bb(obj,id)
+    {
+        if (obj.value == "")
+        {
+            $(id).style.color = 'Gray';
+            obj.value = "用户名/邮箱";
+        }
+    }
+    </script>
+</head>
+<body class="title" style="background-image:url(../../Image/Index/Background.jpg)">
+    <span>
+        <h1>欢迎使用集成系统</h1>
+    </span>
+    <span class="login">
+        @using (Html.BeginForm("Login","Home"))
+        {
+            @Html.ValidationSummary()
+            <p>用户名：@Html.TextBoxFor(x=>x.username, 
+            new {@Value = "用户名/邮箱",@onfocus="aa(this,'username');", @onblur="bb(this,'username');"})<a id="name">@ViewBag.Name</a></p>
+            <p>密码：&emsp;@Html.PasswordFor(x => x.passwd, new { @Value = "" })</p>
+            @Html.ActionLink("找回密码","forget")
+            <br />
+            <input id="login" type="submit" value="登陆">
+            <input id="reg" type="button" value="注册" onclick='location.href("Reg")'>
+        }   
+    </span>
+</body>
+</html>
